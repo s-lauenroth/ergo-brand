@@ -9,17 +9,17 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-/*
- :root {
-  --brand-theme-color: #ff0000;
-  --brand-dark-color: #131313;
-  --brand-light-color: #dcdcdc;
-  --brand-link-color: #131313;
-  --brand-link-hover-color: #ff0000;
-  --brand-text-color: #131313;
+
+/* ERGO Brand Theme Variables */
+:root {
+  --brand-theme-color: #E20020;
+  --brand-dark-color: #1A1A1A;
+  --brand-light-color: #F5F5F5;
+  --brand-link-color: #1A1A1A;
+  --brand-link-hover-color: #E20020;
+  --brand-text-color: #1A1A1A;
   --brand-light-text-color: #ffffff;
 }
-*/
 
 :root {
   /* colors */
@@ -30,17 +30,17 @@
   --text-light: var(--brand-light-text-color, #ffffff);
   --text-disabled:rgb(113, 113, 113);
   --link-color: var(--brand-link-color, #131313);
-  --link-hover-color: var(--brand-link-hover-color, #F97316);
-  --main-accent-color: var(--brand-theme-color, #FB923C);
+  --link-hover-color: var(--brand-link-hover-color, #E20020);
+  --main-accent-color: var(--brand-theme-color, #E20020);
 
 
   --dark-color-opacity: rgba(0, 0, 0, 0.55);
   --light-color-opacity: rgba(255, 255, 255, 0.5);
   --tab-background-color: rgba(0, 0, 0, 0.02);
   /* brand-scoped header/footer variables with sensible defaults */
-  --nav-background-color: var(--brand-nav-background-color, #0000008c);
+  --nav-background-color: var(--brand-nav-background-color, #E20020);
   --nav-text-color: var(--brand-nav-text-color, #ffffff);
-  --footer-background-color: var(--brand-footer-background-color, #000);
+  --footer-background-color: var(--brand-footer-background-color, #1A1A1A);
   --footer-text-color: var(--brand-footer-text-color, #ffffff);
   
   /* fonts */
@@ -296,11 +296,6 @@
     --button-vertical-padding-secondary: 12px;
     --button-horizontal-padding-secondary: 32px;
   }
-
-  /* main .section.bg-image .sec-img {
-    top: 0;
-    object-fit: cover;
-  } */
 }
 
 body {
@@ -331,13 +326,13 @@ body.red-theme {
 }
 
 body.blue-theme {
-  --main-accent-color: #2563EB;   /* Modern Bright Blue */
-  --link-hover-color: #3B82F6;    /* Lighter Sky Blue */
+  --main-accent-color: #2563EB;
+  --link-hover-color: #3B82F6;
 }
 
 body.green-theme {
-  --main-accent-color: #059669;   /* Fresh Emerald */
-  --link-hover-color: #10B981;    /* Lighter Mint Green */
+  --main-accent-color: #059669;
+  --link-hover-color: #10B981;
 }
 
 .wehealthcare-theme {
@@ -610,10 +605,6 @@ main picture:hover::before {
 /* Image Hover Effect Shine - end */
 
 
-
-
-
-
 /* Parallax effect - Start */
 
 main .cards-container {
@@ -637,8 +628,6 @@ main .cards-container {
   transform: initial;
 }
 /* Parallax effect - End */
-
-
 
 
 /* sections */
@@ -802,32 +791,6 @@ main .section.bg-light {
   color: var(--text-color);
 }
 
-/* Section background image */
-/* main .section.bg-image {
-  overflow: hidden;
-  position: relative;  
-}
-main .section.bg-image picture {
-  display: block;
-  width: 100%;
-}
-main .section.bg-image .sec-img {
-  width: 100%;
-  height: auto;           
-  object-fit: contain;    
-  position: static;       
-  top: auto;
-  left: auto;
-  z-index: auto;
-}
-  
-main .section.bg-image > .default-content-wrapper {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: block;
-} */
-
 .adobe-ue-edit header, .adobe-ue-preview header {
   background: #000;
 }
@@ -938,8 +901,6 @@ table {
 
 /*common button css*/
 /* Button styling within */
- /*common button css*/
-/* Button styling within */
 .cta-button a.button {
   display: inline-block;
   padding: 12px 24px !important;
@@ -978,7 +939,7 @@ table {
 }
 
  .cta-button a.button:hover::after {
-  color: var(--main-accent-color) !important  ;
+  color: var(--main-accent-color) !important;
   transform: translateX(2px);
 }
 
@@ -1012,30 +973,28 @@ table {
   color: var(--main-accent-color)!important;
   border:2px solid var(--main-accent-color) !important;
   border-color: var(--main-accent-color) !important;
- 
 }
 
  .cta-button-secondary a.button::after {
-  
-    content: "\f105";
-    font-family: 'Font Awesome 5 Solid';
-    color: var(--main-accent-color) !important;
-    font-size: 20px;
-    margin-left: 8px;
-    transition: all 0.3s ease;
+  content: "\f105";
+  font-family: 'Font Awesome 5 Solid';
+  color: var(--main-accent-color) !important;
+  font-size: 20px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
 }
 
 .cta-button-secondary a.button:hover {
   background-color: var(--main-accent-color)!important;
   color: var(--text-light) !important;
-  
-  text-decoration: none;;
+  text-decoration: none;
 }
 
 .cta-button-secondary a.button:hover::after {
   color: var(--text-light) !important;
   transform: translateX(2px);
 }
+
 /*cta link*/
 .button-container.cta-link a:hover {
   color: var(--main-accent-color) !important;
@@ -1046,12 +1005,6 @@ table {
 .button-container.cta-link {
   margin-top: 5px !important;
 }
-/* Button focus state for accessibility 
- .button-container.cta-button a.button:focus {
-  outline: 2px solid var(--main-accent-color);
-  outline-offset: 2px;
-}
-*/
 
 /*dark mode*/
 .cta-button-dark a.button {
@@ -1103,10 +1056,4 @@ table {
 
 .cta-button-dark a.button:active::after {
   transform: translateX(0);
-}
-
-/* Accessibility: darken default accent and hover for better contrast */
-:root {
-  --main-accent-color: #C2410C; /* darker orange for contrast */
-  --link-hover-color: #9A3412;  /* darker hover */
 }
